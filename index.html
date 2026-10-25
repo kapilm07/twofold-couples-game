@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff8f1" />
+  <meta name="description" content="A tiny daily ritual for two. Play a question, share a story, feel a little closer." />
+  <title>Twofold — A little closer, every day</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Twofold home">
+      <span class="brand-mark" aria-hidden="true">♡</span><span>twofold</span>
+    </a>
+    <div class="topbar-right">
+      <span class="date-pill" id="today-label">TODAY'S LITTLE RITUAL</span>
+      <button class="icon-button" id="sound-toggle" aria-label="Toggle sound effects" title="Sound effects are off">♪<span class="sr-only">Toggle sound</span></button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="intro">
+      <div class="eyebrow"><span class="live-dot"></span> YOUR DAILY MOMENT</div>
+      <h1>A little closer,<br><span>every day.</span></h1>
+      <p class="intro-copy">A small question can open up a whole conversation. Take a breath, get comfy, and make a moment that's just yours.</p>
+      <div class="streak-row">
+        <div class="streak-icon">✦</div>
+        <div><strong id="streak-count">Your first day</strong><small id="streak-caption">Start a tiny tradition together</small></div>
+      </div>
+    </section>
+
+    <section class="game-card" aria-labelledby="game-title">
+      <div class="card-topline"><span class="category" id="category-label">TODAY'S QUESTION</span><span class="round-count" id="round-count">01 / 05</span></div>
+      <div class="progress-track" aria-label="Game progress"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="question-art" aria-hidden="true"><span class="spark spark-a">✦</span><span class="orbit orbit-a"></span><span class="orbit orbit-b"></span><span class="heart-art">♡</span><span class="spark spark-b">✧</span></div>
+      <div id="question-view">
+        <h2 id="game-title">What's a tiny thing I do that makes your day better?</h2>
+        <p class="question-hint" id="question-hint">No perfect answers. Just your answer.</p>
+        <div class="answer-label">PICK THE MOOD FOR YOUR ANSWER</div>
+        <div class="mood-options" role="group" aria-label="Choose your answer mood">
+          <button class="mood-option selected" data-mood="sweet"><span>♡</span><b>Sweet</b></button>
+          <button class="mood-option" data-mood="playful"><span>✦</span><b>Playful</b></button>
+          <button class="mood-option" data-mood="deep"><span>☾</span><b>Deep</b></button>
+        </div>
+        <label class="answer-label" for="answer-input">YOUR ANSWER (OPTIONAL)</label>
+        <textarea id="answer-input" maxlength="240" placeholder="I love when you..." rows="3"></textarea>
+        <div class="input-meta"><span id="char-count">0 / 240</span><span>Only shared if you choose to show it</span></div>
+        <button class="primary-button" id="reveal-button">Reveal our moment <span>→</span></button>
+      </div>
+      <div id="result-view" class="result-view hidden" aria-live="polite">
+        <div class="result-icon">✧</div>
+        <p class="result-kicker">A MOMENT TO KEEP</p>
+        <h2 id="result-title">That's the lovely little stuff.</h2>
+        <p id="result-copy"></p>
+        <div class="your-answer hidden" id="your-answer-wrap"><span>YOUR NOTE</span><p id="your-answer"></p></div>
+        <div class="result-actions">
+          <button class="secondary-button" id="save-button">♡ Save this question</button>
+          <button class="primary-button" id="next-button">Next question <span>→</span></button>
+        </div>
+      </div>
+      <div class="card-footer"><span>✦</span> No scores. No pressure. Just you two.</div>
+    </section>
+
+    <aside class="side-panel">
+      <div class="side-heading"><div><span class="eyebrow">YOUR LITTLE COLLECTION</span><h2>Keep the good ones.</h2></div><span class="collection-count" id="saved-count">0</span></div>
+      <p class="side-copy">Save a question for a quiet night, a long call, or whenever you need a new way to say “tell me more.”</p>
+      <div id="saved-list" class="saved-list">
+        <div class="empty-state"><div class="empty-heart">♡</div><strong>Your collection starts here</strong><span>Tap “Save this question” after a round you love.</span></div>
+      </div>
+      <button class="text-button" id="clear-saved" disabled>Clear saved questions</button>
+      <div class="tiny-note"><span>✿</span><p><strong>A gentle reminder</strong><br>There’s no wrong way to connect. Skip anything that doesn’t feel right.</p></div>
+    </aside>
+  </main>
+  <footer class="footer"><span>made for the moments in between ♡</span><span>Twofold · A small independent demo</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
