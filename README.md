@@ -1,57 +1,86 @@
-# Twofold — A daily connection game
+# Twofold – A Little Closer, Every Day ❤️
 
-A small, responsive, browser-based product demo built with vanilla HTML, CSS, and JavaScript. It is designed as a portfolio project to demonstrate front-end fundamentals, interaction design, accessibility basics, local persistence, and thoughtful UI states.
+## About the Project
+
+Twofold is a simple and interactive website designed to help couples spend quality time together, even when they are physically apart.
+
+The website provides daily conversation questions that encourage couples to share their thoughts, memories, feelings, and experiences. The goal is to make conversations more meaningful and help couples build a stronger connection through small daily interactions.
 
 ## Features
 
-- Daily question rotation based on the local calendar date
-- Three answer moods: Sweet, Playful, and Deep
-- Optional private note field with a 240-character limit and live counter
-- Reveal state with context-specific encouragement
-- Save/remove questions in a collection using `localStorage`
-- Completion state for the day
-- Confirmation before clearing saved questions
-- Toast feedback, keyboard focus styles, responsive layout, and reduced-motion support
-- No backend, account, analytics, or external API required
+- **Daily Questions:** Explore conversation questions designed for couples.
+- **Mood Selection:** Choose between Sweet, Playful, and Deep moods.
+- **Interactive Answers:** Write your own answers and reveal a thoughtful message.
+- **Save Favourite Questions:** Save interesting questions and revisit them later.
+- **Daily Progress:** Track your daily interaction with the website.
+- **Responsive Design:** Use the website on desktop, tablet, and mobile devices.
+- **Local Storage:** Saved questions remain available in the same browser after refreshing the page.
+- **User-Friendly Interface:** Enjoy a clean design with interactive elements and feedback messages.
 
-## Run locally
+## Technologies Used
 
-1. Download or clone this repository.
-2. Open `index.html` in a modern browser.
+- HTML5
+- CSS3
+- JavaScript
+- Browser Local Storage
+- GitHub Pages
 
-For a local server, run one of these commands from the project directory:
+## How It Works
+
+1. Open the website and view the daily conversation question.
+2. Select a mood based on the type of conversation you want.
+3. Enter an optional answer in the text field.
+4. Click the **Reveal our moment** button to see a thoughtful message.
+5. Save your favourite questions to your collection.
+6. Continue exploring questions and use them to start meaningful conversations.
+
+## Getting Started
+
+### Run the Project Locally
+
+1. Clone or download this repository.
+2. Open the project folder.
+3. Open `index.html` in your browser.
+
+You can also run a local development server using Python:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then visit `http://localhost:8000`.
+Then open `http://localhost:8000` in your browser.
 
-## Deploy with GitHub Pages
+## Deployment
 
-1. Create a public GitHub repository, for example `twofold-couples-game`.
-2. Upload `index.html`, `styles.css`, `app.js`, and `README.md` to the repository root.
-3. In GitHub, open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select branch `main` and folder `/ (root)`, then save.
-6. Wait for the Pages deployment to finish. GitHub will show the live URL in the Pages section, usually `https://YOUR-USERNAME.github.io/twofold-couples-game/`.
+The website is hosted using GitHub Pages.
 
-No build step or secrets are required.
+To deploy your own version:
 
-## Project decisions and limitations
+1. Create a repository on GitHub.
+2. Upload `index.html`, `styles.css`, and `app.js` to the repository root.
+3. Navigate to **Settings → Pages**.
+4. Select **Deploy from a branch**.
+5. Choose the `main` branch and the `/(root)` folder.
+6. Save the settings and wait for deployment to complete.
 
-- The app stores saved questions and completion dates only in the current browser. They do not sync between partners or devices.
-- The question rotation is deterministic by local date, so everyone opening the app on the same date sees the same first prompt.
-- Sound is optional and off by default.
-- Google Fonts is an optional external font request; system fallbacks keep the page usable if it cannot load.
+## Future Improvements
 
-## Before using this as a job application sample
+- Allow couples to share answers with each other.
+- Add more daily questions and categories.
+- Introduce user accounts and personalised experiences.
+- Build a backend to synchronise saved questions across devices.
+- Add more interactive games and real-time features.
 
-Make sure you personally run it, test the flows, and can explain the code. Improve it with at least one change of your own before sharing it as work you personally built. In particular, be ready to explain:
-- How `localStorage` is wrapped to handle unavailable storage
-- How the app handles empty, result, saved, and confirmation states
-- Why user-entered text is rendered with `textContent` rather than injected as HTML
-- What you would change to sync answers between two people (a backend, authentication, and privacy model)
-- How you would test question rotation, saving/removing, and storage failures
+## What I Learned
 
-This is an independent portfolio demo and is not affiliated with Kulfi.
+Through this project, I explored how to build an interactive web application using HTML, CSS, and JavaScript. I worked on managing UI states, handling user interactions, storing data in the browser, creating responsive layouts, and deploying a website using GitHub Pages.
+
+## Author
+
+**Kapil M**
+
+GitHub: [kapilm07](https://github.com/kapilm07)
+
+---
+
+*Twofold is an independent portfolio project built to explore simple, meaningful digital experiences for couples.*
